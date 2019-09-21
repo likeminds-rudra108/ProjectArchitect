@@ -1,0 +1,29 @@
+﻿@using POC.Entity
+@model IEnumerable<CustomerEntity>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-2">Id</div>
+        <div class="col-sm-2">FirstName</div>
+        <div class="col-sm-2">LastName</div>
+        <div class="col-sm-2">Country</div>
+        <div class="col-sm-2">City</div>
+        <div class="col-sm-2">Phone</div>
+    </div>
+    <div class="clearfix"><br /></div>
+    @foreach (var customer in Model)
+    {
+        <div class="row">
+            <div class="col-sm-2">@customer.Id</div>
+            <div class="col-sm-2">@customer.FirstName</div>
+            <div class="col-sm-2">@customer.LastName</div>
+            <div class="col-sm-2">@customer.Country</div>
+            <div class="col-sm-2">@customer.City</div>
+            <div class="col-sm-2">@customer.Phone</div>
+        </div>
+    }
+</div>
